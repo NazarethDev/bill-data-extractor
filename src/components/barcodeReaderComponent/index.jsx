@@ -52,16 +52,16 @@ export default function BarcodeScanner({
 
                         <button
                             className={`btn w-100 ${showCamera
-                                    ? "btn-danger"
-                                    : "btn-primary"
+                                ? "btn-danger"
+                                : "btn-primary"
                                 }`}
                             onClick={() => setShowCamera(!showCamera)}
                         >
 
                             <i
                                 className={`bi ${showCamera
-                                        ? "bi-camera-video-off"
-                                        : "bi-camera-video"
+                                    ? "bi-camera-video-off"
+                                    : "bi-camera-video"
                                     } me-2`}
                             />
 
@@ -88,6 +88,7 @@ export default function BarcodeScanner({
                                         ref={videoRef}
                                         autoPlay
                                         playsInline
+                                        muted
                                         className="rounded object-fit-cover"
                                     />
 
