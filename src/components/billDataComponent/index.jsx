@@ -104,8 +104,8 @@ export default function BillData({ barcode }) {
                     <div className="col-12">
 
                         <CopyField
-                            label="Código de barras"
-                            value={bill.barcode}
+                            label="Linha digitável:"
+                            value={bill.writableLine}
                         />
 
                     </div>
