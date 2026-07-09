@@ -6,7 +6,7 @@ export function getExpirationDate(barcode) {
 
     if (factor === 0) return "Sem data de vencimento";
 
-    const baseDate = new Date(2022, 4, 29); 
+    const baseDate = new Date(2022, 1, 22); 
 
     const daysToAdd = factor - 1000;
     baseDate.setDate(baseDate.getDate() + daysToAdd);
