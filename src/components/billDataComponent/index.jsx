@@ -66,7 +66,7 @@ export default function BillData({ barcode }) {
                         onClick={() => handleCopy(value)}
                     >
 
-                        <i className="bi bi-copy"></i>
+                        <i className="bi bi-clipboard text-primary"></i>
 
                     </button>
 
@@ -88,9 +88,9 @@ export default function BillData({ barcode }) {
             <div className="card-body">
 
 
-                <h3 className="h4 mb-4">
+                <h3 className="h4 mb-4 text-light">
 
-                    <i className="bi bi-receipt me-2"></i>
+                    <i className="bi bi-receipt me-2 text-primary"></i>
 
                     Dados do boleto
 

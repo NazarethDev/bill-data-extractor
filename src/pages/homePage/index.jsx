@@ -24,7 +24,7 @@ export default function Home() {
 
                             <h1 className="display-6 fw-bold">
                                 <i className="bi bi-upc-scan me-2"></i>
-                                Leitor de boleto
+                                Leitor básico de boletos
                             </h1>
 
                             <p className="text-secondary mb-0 text-light">
