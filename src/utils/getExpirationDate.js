@@ -1,4 +1,4 @@
-export function getExpirationDate(barcode) {
+/*export function getExpirationDate(barcode) {
 
     if (!barcode) return null;
 
@@ -13,4 +13,18 @@ export function getExpirationDate(barcode) {
     baseDate.setDate(baseDate.getDate() + days);
 
     return baseDate.toLocaleDateString("pt-BR");
-} 
+} */
+
+export function getExpirationDate(barcode) {
+    if (!barcode || barcode.length !== 44) return null;
+
+    const cleanBarcode = barcode.replace(/\D/g, "");
+
+    const factor = Number(cleanBarcode.substring(5, 9));
+
+    const baseDate = new Date(2022, 4, 29);
+
+    baseDate.setDate(baseDate.getDate() + factor);
+
+    return baseDate.toLocaleDateString("pt-BR");
+}
