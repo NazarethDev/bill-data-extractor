@@ -13,7 +13,7 @@ export function parseBill(barcode) {
 
     return {
         barcode: normalizedBarcode,
-        writableLine: barcodeToWritableLine(normalizeBarcode),
+        writableLine: barcodeToWritableLine(normalizedBarcode),
         expirationDate: getExpirationDate(normalizedBarcode),
         amount: getAmountToPay(normalizedBarcode)
     };
