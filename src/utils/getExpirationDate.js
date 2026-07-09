@@ -6,10 +6,15 @@ export function getExpirationDate(barcode) {
 
     if (factor === 0) return "Sem data de vencimento";
 
-    const baseDate = new Date(2022, 1, 22); 
+    if (factor >= 1000 && factor < 2500) {
+        const baseDate = new Date(2025, 1, 22);
+        const daysToAdd = factor - 1000;
+        baseDate.setDate(baseDate.getDate() + daysToAdd);
+        return baseDate.toLocaleDateString("pt-BR");
+    }
 
-    const daysToAdd = factor - 1000;
-    baseDate.setDate(baseDate.getDate() + daysToAdd);
-
+    const baseDate = new Date(1997, 9, 7); 
+    baseDate.setDate(baseDate.getDate() + factor);
+    
     return baseDate.toLocaleDateString("pt-BR");
 }
