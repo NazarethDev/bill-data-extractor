@@ -1,16 +1,28 @@
-# React + Vite
+# Bill Data Extractor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação desenvolvida em React + Vite que realiza a leitura de boletos bancários brasileiros por meio da câmera do dispositivo ou da digitação manual do código de barras.
 
-Currently, two official plugins are available:
+Este projeto foi criado como um exercício de lógica de programação utilizando as regras do sistema de boletos brasileiro, com foco na extração e interpretação das informações contidas no código de barras.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Há um deploy disponível da aplicação no Vercel [neste link!](https://bill-data-extractor.vercel.app/) Sinta-se a vontade para abrir e testar!
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 📷 Leitura do código de barras utilizando a câmera do dispositivo.
+* ✍️ Entrada manual do código de barras.
+* 📅 Cálculo da data de vencimento a partir do fator de vencimento do boleto.
+* 💰 Extração e formatação do valor do boleto.
+* 📋 Cópia do código de barras, da data de vencimento e do valor para a área de transferência.
+* 📱 Interface responsiva desenvolvida com Bootstrap e tema escuro.
 
-## Expanding the ESLint configuration
+## Tecnologias utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React
+* Vite
+* Bootstrap
+* Bootstrap Icons
+* ZXing (`@zxing/browser`)
+
+## Objetivo
+
+O objetivo deste projeto foi praticar conceitos de desenvolvimento front-end e lógica de negócio, implementando a interpretação de códigos de barras de boletos bancários conforme o padrão brasileiro. A aplicação realiza o processamento local das informações lidas, sem envio de dados para servidores ou integração com instituições financeiras.
