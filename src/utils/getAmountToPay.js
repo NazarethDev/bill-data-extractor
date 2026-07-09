@@ -7,7 +7,7 @@ export function getAmountToPay(barcode) {
     const cleanBarcode = barcode.replace(/\D/g, "");
 
     const amountStr = cleanBarcode.substring(9, 19);
-    const amountInNumber = Number(amount) / 100;
+    const amountInNumber = Number(amountStr) / 100;
 
     return amountInNumber.toLocaleString("pt-BR", {
         style: "currency",

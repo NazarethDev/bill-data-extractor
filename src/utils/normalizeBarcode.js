@@ -1,8 +1,5 @@
 export function normalizeBarcode(barcode) {
-
-    if (!barcode) {
-        return null;
-    }
+    if (!barcode) return null;
 
     const cleanBarcode = barcode.replace(/\D/g, "");
 
@@ -11,18 +8,17 @@ export function normalizeBarcode(barcode) {
         return cleanBarcode;
     }
 
-    // Linha digitável de boleto bancário
     if (cleanBarcode.length === 47) {
-
         return (
             cleanBarcode.substring(0, 4) +
             cleanBarcode.substring(32, 33) +
-            cleanBarcode.substring(33, 47)
+            cleanBarcode.substring(33, 47) +
+            cleanBarcode.substring(4, 9) +
+            cleanBarcode.substring(10, 20) +
+            cleanBarcode.substring(21, 31)
         );
-
     }
 
-    // Linha digitável de arrecadação/concessionária
     if (cleanBarcode.length === 48) {
         return cleanBarcode;
     }
